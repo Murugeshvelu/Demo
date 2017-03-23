@@ -45,6 +45,20 @@ namespace Boiler.Web
                         url: "#/about",
                         icon: "fa fa-info"
                         )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Create Question",
+                        new LocalizableString("Question", BoilerConsts.LocalizationSourceName),
+                        url: "#/CreateQuestion",
+                        icon: "fa fa-info"
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Take Question",
+                        new LocalizableString("TakeQuestion", BoilerConsts.LocalizationSourceName),
+                        url: "#/TakeQuestion",
+                        icon: "fa fa-info"
+                        )
                 );
         }
 

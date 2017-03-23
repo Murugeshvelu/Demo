@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    
+
     var app = angular.module('app', [
         'ngAnimate',
         'ngSanitize',
@@ -15,7 +15,7 @@
     //Configuration for Angular UI routing.
     app.config([
         '$stateProvider', '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
+        function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/');
 
             if (abp.auth.hasPermission('Pages.Users')) {
@@ -48,7 +48,18 @@
                     url: '/about',
                     templateUrl: '/App/Main/views/about/about.cshtml',
                     menu: 'About' //Matches to name of 'About' menu in BoilerNavigationProvider
-                });
+                })
+            .state('createQuestion', {
+                url: '/CreateQuestion',
+                templateUrl: '/App/Main/views/CreateQuestion/CreateQuestion.cshtml',
+                menu: 'Create Question' //Matches to name of 'CreateQuestion' menu in BoilerNavigationProvider
+            })
+            .state('takeQuestion', {
+                url: '/TakeQuestion',
+                templateUrl: '/App/Main/views/TakeQuestion/TakeQuestion.cshtml',
+                menu: 'Take Question' //Matches to name of 'TakeQuestion' menu in BoilerNavigationProvider
+            })
+            ;
         }
     ]);
 })();
