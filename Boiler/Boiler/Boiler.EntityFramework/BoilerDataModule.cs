@@ -11,7 +11,7 @@ namespace Boiler
     {
         public override void PreInitialize()
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<BoilerDbContext>());
+           Database.SetInitializer(new CreateDatabaseIfNotExists<BoilerDbContext>());
 
             Configuration.DefaultNameOrConnectionString = "Default";
         }

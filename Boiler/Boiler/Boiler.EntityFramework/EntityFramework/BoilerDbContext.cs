@@ -16,7 +16,7 @@ namespace Boiler.EntityFramework
          *   pass connection string name to base classes. ABP works either way.
          */
         public BoilerDbContext()
-            : base("Default")
+            : base("Boiler")
         {
 
         }

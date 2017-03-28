@@ -23,6 +23,7 @@ using Boiler.Web.Models.Account;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using Boiler.CreateQuestion;
 
 namespace Boiler.Web.Controllers
 {
@@ -153,6 +154,13 @@ namespace Boiler.Web.Controllers
         {
             AuthenticationManager.SignOut();
             return RedirectToAction("Login");
+        }
+
+        public ActionResult GetCategories()
+        {
+            return RedirectToAction("Login");
+            //var result = _CreateQuestion.GetCategories();
+            //return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         #endregion
@@ -482,5 +490,7 @@ namespace Boiler.Web.Controllers
         }
 
         #endregion
+
+
     }
 }
