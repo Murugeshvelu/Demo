@@ -1,4 +1,5 @@
-﻿using Boiler.CreateQuestion;
+﻿using Boiler.Api.Models;
+using Boiler.Web.Models.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +11,32 @@ namespace Boiler.Web.Controllers
     public class CreateQuestionController : BoilerControllerBase
     {
 
-        private readonly CreateQuestionService _CreateQuestion;
-        public CreateQuestionController()
-        {
-        }
-
-        public CreateQuestionController(CreateQuestionService createQuestion)
-        {
-            _CreateQuestion = createQuestion;
-        }
-
-        // GET: CreateQuestion
-        public ActionResult CreateQuestion()
-        {
-            return View();
-        }
-
-
+        public BoilerEntities _boilerentity = new BoilerEntities();
+      
         public ActionResult GetCategories()
         {
-            var result = _CreateQuestion.GetCategories();
-            return Json(result.ToList(), JsonRequestBehavior.AllowGet);
+            var categories = (from cat in _boilerentity.Categories
+                              select new Categories()
+                              {
+                                  CategoryId = cat.CategoryId,
+                                  CategoryName = cat.CategoryName,
+                                  IsDeleted = cat.IsDeleted
+                              }).Distinct().ToList();
+
+            return Json(categories, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GetQuestionType()
+        {
+            var QuestionTypes = (from ques in _boilerentity.Categories
+                                 select new QuestionTypes()
+                                 {
+                                     QuestionTypeId = ques.CategoryId,
+                                     QuestionType = ques.CategoryName,
+                                     IsDeleted = ques.IsDeleted
+                                 }).Distinct().ToList();
+
+            return Json(QuestionTypes, JsonRequestBehavior.AllowGet);
         }
     }
 }

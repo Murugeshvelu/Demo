@@ -23,7 +23,6 @@ using Boiler.Web.Models.Account;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Boiler.CreateQuestion;
 
 namespace Boiler.Web.Controllers
 {

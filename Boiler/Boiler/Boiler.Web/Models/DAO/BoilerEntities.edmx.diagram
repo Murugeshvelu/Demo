@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86844923a54f4f03989f16a8bf4f82de" Name="Diagram1">
+        <EntityTypeShape EntityType="BoilerModel.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpAuditLog" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpBackgroundJob" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpEdition" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpFeature" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpLanguage" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpLanguageText" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpNotification" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpNotificationSubscription" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpOrganizationUnit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpPermission" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpRole" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpSetting" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpTenantNotification" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpTenant" Width="1.5" PointX="8" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserAccount" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserClaim" Width="1.5" PointX="3" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserLoginAttempt" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserLogin" Width="1.5" PointX="3" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserNotification" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserOrganizationUnit" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUserRole" Width="1.5" PointX="3" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.AbpUser" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.Category" Width="1.5" PointX="8" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.Question" Width="1.5" PointX="10.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoilerModel.QuestionType" Width="1.5" PointX="8" PointY="18.75" IsExpanded="true" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpFeatures_dbo_AbpEditions_EditionId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpTenants_dbo_AbpEditions_EditionId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpOrganizationUnits_dbo_AbpOrganizationUnits_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpPermissions_dbo_AbpRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpPermissions_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpRoles_dbo_AbpUsers_CreatorUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpRoles_dbo_AbpUsers_DeleterUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpRoles_dbo_AbpUsers_LastModifierUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpSettings_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpTenants_dbo_AbpUsers_CreatorUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpTenants_dbo_AbpUsers_DeleterUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpTenants_dbo_AbpUsers_LastModifierUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_Questions_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpUserClaims_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpUserLogins_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpUserRoles_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpUsers_dbo_AbpUsers_CreatorUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpUsers_dbo_AbpUsers_DeleterUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_dbo_AbpUsers_dbo_AbpUsers_LastModifierUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_Questions_AbpUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_Questions_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="BoilerModel.FK_Questions_QuestionType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

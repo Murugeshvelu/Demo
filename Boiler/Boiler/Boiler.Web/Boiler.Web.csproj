@@ -388,6 +388,16 @@
     <Content Include="App\Main\web.config" />
     <Content Include="log4net.config" />
     <Content Include="App\Main\views\layout\header.cshtml" />
+    <Content Include="Models\DAO\BoilerEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BoilerEntities.edmx</DependentUpon>
+      <LastGenOutput>BoilerEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DAO\BoilerEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BoilerEntities.edmx</DependentUpon>
+      <LastGenOutput>BoilerEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -462,6 +472,13 @@
     <Content Include="Abp\Framework\styles\abp.css.map" />
     <Content Include="App\Main\views\CreateQuestion\CreateQuestion.cshtml" />
     <Content Include="App\Main\views\TakeQuestion\TakeQuestion.cshtml" />
+    <EntityDeploy Include="Models\DAO\BoilerEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BoilerEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DAO\BoilerEntities.edmx.diagram">
+      <DependentUpon>BoilerEntities.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1270,6 +1287,99 @@
     <Compile Include="Models\Account\RegisterResultViewModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Account\TenantSelectionViewModel.cs" />
+    <Compile Include="Models\DAO\AbpAuditLog.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpBackgroundJob.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpEdition.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpFeature.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpLanguage.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpLanguageText.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpNotification.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpNotificationSubscription.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpOrganizationUnit.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpPermission.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpRole.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpSetting.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpTenant.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpTenantNotification.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUser.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserAccount.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserClaim.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserLogin.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserLoginAttempt.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserNotification.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserOrganizationUnit.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\AbpUserRole.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\BoilerEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoilerEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\BoilerEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\BoilerEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoilerEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\Category.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\C__MigrationHistory.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\Question.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAO\QuestionType.cs">
+      <DependentUpon>BoilerEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\BoilerWebViewPageBase.cs" />
   </ItemGroup>

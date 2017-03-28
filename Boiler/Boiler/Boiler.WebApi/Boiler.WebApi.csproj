@@ -156,116 +156,12 @@
   <ItemGroup>
     <Compile Include="Api\BoilerWebApiModule.cs" />
     <Compile Include="Api\Controllers\AccountController.cs" />
-    <Compile Include="Api\Controllers\CreateQuestionController.cs" />
-    <Compile Include="Api\Models\AbpAuditLog.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpBackgroundJob.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpEdition.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpFeature.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpLanguage.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpLanguageText.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpNotification.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpNotificationSubscription.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpOrganizationUnit.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpPermission.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpRole.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpSetting.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpTenant.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpTenantNotification.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUser.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserAccount.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserClaim.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserLogin.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserLoginAttempt.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserNotification.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserOrganizationUnit.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\AbpUserRole.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\BoilerEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BoilerEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\BoilerEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\BoilerEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BoilerEntities.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Api\Models\Categories.cs" />
-    <Compile Include="Api\Models\Category.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\C__MigrationHistory.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Api\Models\LoginModel.cs" />
-    <Compile Include="Api\Models\Question.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Api\Models\QuestionType.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Api\Models\QuestionTypes.cs" />
-    <Compile Include="Api\Models\SubQuestion.cs">
-      <DependentUpon>BoilerEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Api\Models\BoilerEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BoilerEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Api\Models\BoilerEntities.edmx.diagram">
-      <DependentUpon>BoilerEntities.edmx</DependentUpon>
-    </None>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -283,18 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Api\Models\BoilerEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BoilerEntities.edmx</DependentUpon>
-      <LastGenOutput>BoilerEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Api\Models\BoilerEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BoilerEntities.edmx</DependentUpon>
-      <LastGenOutput>BoilerEntities.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

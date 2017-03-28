@@ -4,14 +4,18 @@ app.controller(controllerId, ['$scope', 'createquestionService', function ($scop
     createquestionService.getCategories()
      .then(function (data) {
          $scope.categories = data;
-     })
-            .finally(function () { blockUi.unblockUI(); });
+     });
+
+    createquestionService.getQuestionTypes()
+        .then(function (data) {
+            $scope.categories = data;
+        });
 }
 ]);
 
-app.service('createquestionService',  function ($http, $q) {
-   this.getCategories= function () {
-        var response =$http({
+app.service('createquestionService', function ($http, $q) {
+    this.getCategories = function () {
+        var response = $http({
             method: "GET",
             url: "/CreateQuestion/GetCategories",
             dataType: "json"
@@ -19,7 +23,17 @@ app.service('createquestionService',  function ($http, $q) {
         });
         return response;
     }
-  
+
+    this.getQuestionTypes = function () {
+        var response = $http({
+            method: "GET",
+            url: "/CreateQuestion/GetQuestionTypes",
+            dataType: "json"
+
+        });
+        return response;
+    }
+
     //var data;
     //return {
     //    getCategories: function () {

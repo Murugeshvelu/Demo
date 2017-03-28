@@ -107,8 +107,6 @@
   <ItemGroup>
     <Compile Include="BoilerApplicationModule.cs" />
     <Compile Include="BoilerAppServiceBase.cs" />
-    <Compile Include="CreateQuestion\CreateQuestionService.cs" />
-    <Compile Include="CreateQuestion\ICreateQuestionService.cs" />
     <Compile Include="MultiTenancy\Dto\CreateTenantInput.cs" />
     <Compile Include="MultiTenancy\ITenantAppService.cs" />
     <Compile Include="MultiTenancy\Dto\TenantListDto.cs" />
